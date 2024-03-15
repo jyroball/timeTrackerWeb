@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head><title> Time Tracker - Testing </title>
+<link rel="Stylesheet" type="text/css" href="tTStyle.css">
+
+</head>
+<body>
+<!-- Menu Bar. -->
+<ul class="pages">	
+	<li> <a href="register.html"> Admin </a> </li>
+	<li> <a href="add.html"> Add Course </a> </li>
+	<li> <a class="logo" href="timeTracker.html"> Time Tracker </a> </li>
+</ul>
+<div class="divider">
+	<table border=0>
+		<td> </td>
+	</table>
+</div>
+<!-- Extra BR to move logo down. -->
+<br><br>
+<br><br>
+<!-- Output picture logo. -->
+<div class="pictureLogo">
+	<img src="time.png" alt="Timer Logo" width="150" title="Timer Logo"> 
+	<p class="timeTracker">Time Tracker</p>
+</div>
+<!-- Input form for user's ID. -->
+<div class="inputTracker">
+	<button onclick="getTime()"><p class="timeButton" id="time"></p></button>
+	<p id="output"></p>
+</div>
+<!-- BR for footer. -->
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<!-- Footer for extra links. -->
+<footer align="center">
+	<script>
+	var time1;
+	var time2;
+	var totTime;
+	var clicked = false;
+	document.getElementById("time").innerHTML = "Record";
+	
+	function getTime() {
+		<!-- Get time first time around -->
+		if(!clicked) {
+			const d = new Date();
+			time1 = d.getTime();
+			document.getElementById("time").innerHTML = "Stop";
+			document.getElementById("output").innerHTML = " ";
+			clicked = true;
+		}
+		<!-- Get time second time around -->
+		else {
+			const d = new Date();
+			time2 = d.getTime();
+			<!-- Subtract 2 times to get total time -->
+			totTime = time2 - time1;
+			document.getElementById("time").innerHTML = "Record";
+			<!-- Initialize time -->
+			var sec = 0;
+			var min = 0;
+			var hour = 0;
+			<!-- Conversion -->
+			//Initialize sec as totTime
+			var milsec = totTime;
+			if(milsec >= 1000) {
+				//Find Milisecond and seconds
+				sec = milsec / 1000;
+				milsec = milsec % 1000;
+				//Find total minutes though division
+				if (sec >= 60) {
+					//Divide seconds by 60 to find total minutes
+					min = sec / 60;
+					//Find remainder for the seconds
+					sec = sec % 60;
+					//change minutes into hours
+					if (min >= 60) {
+						//Get hours by dividing minutes by 60
+						hour = min / 60;
+						//Find remainder for minutes
+						min = min % 60;
+					}
+				}
+			}
+			<!-- Make String for output -->
+			let text1 = "Your total Time is";
+			let text2 = text1.concat(" ", Math.round(hour), " hours, ", Math.round(min), " minutes, ", Math.round(sec), " seconds!");
+			//Output
+			document.getElementById("output").innerHTML = text2;
+			clicked = false;
+		}
+	}
+	</script>
+	<p> <a class="links" href="https://rcc-ist-computer-lab.com/assets/misc/How-to.pdf">Help</a> | <a class="links" href="library.html">Libraries</a> </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title> Time Tracker - Home </title>
+	<link rel="Stylesheet" type="text/css" href="tTStyle.css">
+	<!-- JavaScript include -->
+	<script>
+		function register() {
+			//Initialize variables
+			var id = getElementById("id");
+			var userTime = 0;
+			var counter = 0;
+			let valid = true;
+			//array for all students
+			var students = '{"studentList":[]}';
+			//Set data if there is contents in local storage
+			if(localStorage.getItem('students') != null) {
+				students = localStorage.getItem('students');
+			} 
+			
+			//Figure out how to get data into stuff
+			
+			
+		}
+	</script>
+</head>
+<body>
+<!-- Menu Bar. -->
+<ul class="pages">	
+	<li> <a href="register.html"> Register </a> </li>
+	<li> <a class="logo" href="timeTracker.html"> Time Tracker </a> </li>
+</ul>
+<div class="divider">
+	<table border=0>
+		<td> </td>
+	</table>
+</div>
+<!-- Extra BR to move logo down. -->
+<br><br>
+<br><br>
+<!-- Output picture logo. -->
+<div class="pictureLogo">
+	<img src="time.png" alt="Timer Logo" width="150" title="Timer Logo"> 
+	<p class="timeTracker">Time Tracker</p>
+</div>
+<!-- Input form for user's ID. -->
+<div class="inputTracker">
+	<form>
+		<input type="text" name="id" id="id" placeholder="ID Number" pattern="[0-9]{7}"></input>
+		<button onclick="login()">Submit</button>
+	</form>
+</div>
+<!-- BR for footer. -->
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<!-- Footer for extra links. -->
+<footer align="center">
+	<p> <a class="links" href="https://rcc-ist-computer-lab.com/assets/misc/How-to.pdf">Help</a> | <a class="links" href="library.html">Libraries</a> </p>
+</footer>
+
+</body>
+</html>

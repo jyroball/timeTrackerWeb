@@ -1,0 +1,120 @@
+/* Stylesheet*/
+/* For the Nav Bar */
+.pages {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	background-color: #393939;
+	position: sticky;
+	top: 0;
+}
+li a:not(.list):not(.logo) {
+	display: block;
+	width: 150px;
+	float: right;
+	padding: 15px;
+	text-align: center;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 25px
+}
+li a:hover:not(.active):not(.list) {
+	background-color: rgb(255, 157, 0);
+}
+.logo {
+	display: block;
+	width: 200px;
+	float: left;
+	padding: 15px;
+	text-align: center;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 25px
+}
+.pictureLogo {
+	display: flex;
+	width: 200px;
+	flex-wrap: wrap;
+	width: 31em;
+	margin: 0 auto 0;
+	align-items: center;
+	justify-content: center;
+}
+p.timeTracker {
+	padding: 0px;
+	text-decoration: none;
+	font-size: 55px
+}
+
+p.timeButton {
+	margin: 4px;
+	font-size: 18px;
+	line-height: 1;
+}
+/* inside the Body */
+body {
+	font-family: sans-serif;
+	background-color: #f7f7f7;
+	margin: 0px;
+}
+.backgroundtext {
+	background-color: #393939;
+	padding: 3px;
+}
+.titleFont {
+	color: #f7f7f7;
+	margin: 0px 150px 0px 150px;
+}
+.inputTracker {
+	margin: 10px 150px 10px 150px;
+	text-align: center;
+}
+.content {
+	margin: 10px 150px 10px 150px;
+}
+p, ul, ol, dl {
+	font-size: 18px;
+	line-height: 1.4;
+}
+.divider {
+	background-color: rgb(255, 157, 0);
+}
+/* Link states */
+.links:link {
+	color: rgb(255, 157, 0);
+	text-decoration: none;
+}
+.links:visited {
+	color: rgb(255, 157, 0);
+	text-decoration: none;
+}
+.links:hover {
+	color: rgb(255, 157, 0);
+	text-decoration: underline;
+}
+.links:active {
+	color: #f7f7f7;
+	text-decoration: underline;
+}
+.list:link {
+	color: rgb(255, 157, 0);
+	text-decoration: none;
+}
+.list:visited {
+	color: rgb(255, 157, 0);
+	text-decoration: none;
+}
+.list:hover {
+	color: rgb(255, 157, 0);
+	text-decoration: underline;
+}
+.list:active {
+	color: #f7f7f7;
+	text-decoration: underline;
+}
+
+
+
+
+
